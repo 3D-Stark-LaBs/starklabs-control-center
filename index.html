@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stark LaBs - Control Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'brand-indigo': '#4F46E5',
+            'brand-purple': '#7C3AED',
+            'brand-orange': '#F97316',
+            'dark-800': '#1F2937',
+            'dark-900': '#111827',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    #theme-toggle-dark-icon, #theme-toggle-light-icon {
+        display: none;
+    }
+    html.dark #theme-toggle-light-icon, html:not(.dark) #theme-toggle-dark-icon {
+        display: block;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-dark-900 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
+  <header class="relative bg-white dark:bg-dark-800 py-6 shadow text-center">
+    <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-indigo to-brand-purple">
+      Stark LaBs - Control Center ⚙️
+    </h1>
+    <p class="text-sm text-gray-500 dark:text-gray-400">Manage all tools & dashboards from one place</p>
+
+    <button id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode" class="absolute top-1/2 right-4 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+      <svg id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+      <svg id="theme-toggle-light-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 18a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zM5.05 14.95l-.707-.707a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414zM2.464 6.464a1 1 0 010-1.414l.707-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM13.536 2.464a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414z"/></svg>
+    </button>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+          <a href="https://3d-stark-labs.github.io/starklabs-project-json-panel/" target="_blank" rel="noopener noreferrer" class="block p-5 rounded-xl shadow bg-white dark:bg-dark-800 hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold text-brand-purple">📦 Project JSON Panel</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Create and generate project data in JSON</p>
+      </a>
+
+      <a href="https://github.com/3D-Stark-LaBs/starklabs-project-json-panel" target="_blank" rel="noopener noreferrer" class="block p-5 rounded-xl shadow bg-white dark:bg-dark-800 hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-white">📁 Project JSON Repo</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Codebase for the project creation panel</p>
+      </a>
+
+      <a href="https://3d-stark-labs.github.io/starklabs-event-json-panel/" target="_blank" rel="noopener noreferrer" class="block p-5 rounded-xl shadow bg-white dark:bg-dark-800 hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold text-brand-orange">📅 Event JSON Panel</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Create and manage event/offers JSON data</p>
+      </a> 
+      
+      <a href="https://github.com/3D-Stark-LaBs/starklabs-event-json-panel" target="_blank" rel="noopener noreferrer" class="block p-5 rounded-xl shadow bg-white dark:bg-dark-800 hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-white">📁 Event JSON Repo</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Codebase for the event creation panel</p>
+      </a>
+      
+      <a href="https://3d-stark-labs.github.io/3D.starkLaBs/" target="_blank" rel="noopener noreferrer" class="block p-5 rounded-xl shadow bg-white dark:bg-dark-800 hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold text-brand-indigo">🌐 Main Website</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Public landing page for services and tools</p>
+      </a>
+
+
+      <a href="https://github.com/3D-Stark-LaBs/starklabs-project-json-panel" target="_blank" rel="noopener noreferrer" class="block p-5 rounded-xl shadow bg-white dark:bg-dark-800 hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-white">📁 Project JSON Repo</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Codebase for the project creation panel</p>
+      </a>
+
+      
+
+      <a href="https://3d-stark-labs.github.io/Stark-LaBs-Calc/" target="_blank" rel="noopener noreferrer" class="block p-5 rounded-xl shadow bg-white dark:bg-dark-800 hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold text-green-600">🧮 Cost Calculator</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Smart tool to calculate printing costs</p>
+      </a>
+
+      <a href="https://github.com/3D-Stark-LaBs/3D.starkLaBs" target="_blank" rel="noopener noreferrer" class="block p-5 rounded-xl shadow bg-white dark:bg-dark-800 hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-white">💻 GitHub Main Repository</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300">All main source code for the public website</p>
+      </a>
+
+
+
+      <a href="https://github.com/3D-Stark-LaBs/Stark-LaBs-Calc" target="_blank" rel="noopener noreferrer" class="block p-5 rounded-xl shadow bg-white dark:bg-dark-800 hover:shadow-lg transition">
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-white">📁 Calculator Repo</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Full source code for the cost calculator</p>
+      </a>
+
+      <a href="https://www.facebook.com/profile.php?id=61577897833392" target="_blank" rel="noopener noreferrer" class="block p-5 rounded-xl shadow bg-white dark:bg-dark-800 hover:shadow-lg transition col-span-full">
+        <h2 class="text-lg font-semibold text-blue-600">📱 Facebook Page</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Follow us on Facebook for updates and offers</p>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+
+    const applyTheme = () => {
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    };
+
+    applyTheme();
+
+    themeToggleBtn.addEventListener('click', function () {
+      document.documentElement.classList.toggle('dark');
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.setItem('color-theme', 'dark');
+      } else {
+        localStorage.setItem('color-theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
